@@ -3,7 +3,7 @@ def main():
     print("   Welcome to the Cloud Cost Estimator ")
     print("=======================================")
     
-    # This while loop keeps the program running until the user types 'no'
+    # This while loop keeps the program running until the user types (no)
     calculate_again = 'yes'
     
     while calculate_again.lower() == 'yes':
@@ -48,7 +48,7 @@ def main():
             # Calculate cost: $0.08 per hour * hours per day * 30 days * number of databases
             monthly_cost = 0.08 * hours_per_day * 30 * databases
             
-        # ERROR HANDLING FOR INVALID INPUT 
+        # ERROR HANDLING  
         else:
             print("Invalid choice. Please select 1, 2, or 3.")
             continue 
@@ -56,12 +56,10 @@ def main():
         # OUTPUT 
         print("\n---------------------------------------")
         print(f"Selected Service: {service_name}")
+        
         # The :.2f formats the number to always show 2 decimal places (like money)
         print(f"Estimated Monthly Cost: ${monthly_cost:.2f}")
         print("---------------------------------------")
-        
-        # The requested extra feature tip
-        print("Tip: Reduce usage hours or scale down resources to save costs!")
         
         # Ask if they want to run it again
         calculate_again = input("\nWould you like to calculate another service? (yes/no): ")
